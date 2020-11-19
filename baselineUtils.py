@@ -263,7 +263,7 @@ def get_strided_data_clust(dt, gt_size, horizon, step):
 
     return inp_norm[:,:gt_size],inp_norm[:,gt_size:],{'mean': inp_mean, 'std': inp_std, 'seq_start': inp_te_np[:, 0:1, :].copy(),'frames':frames,'peds':ped_ids}
 
-
+##this tells us the distance mad
 def distance_metrics(gt,preds):
     errors = np.zeros(preds.shape[:-1])
     for i in range(errors.shape[0]):
